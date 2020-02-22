@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <library path="lib/libur3_ik_moveit_plugin">
-  <class name="ur3_manipulator_kinematics/IKFastKinematicsPlugin" type="ikfast_kinematics_plugin::IKFastKinematicsPlugin" base_class_type="kinematics::KinematicsBase">
+  <class name="ur_ik_plugin/UR3KinematicsPlugin" type="ikfast_kinematics_plugin::IKFastKinematicsPlugin" base_class_type="kinematics::KinematicsBase">
     <description>IKFast61 plugin for closed-form kinematics</description>
   </class>
 </library>
 <library path="lib/libur5_ik_moveit_plugin">
-  <class name="ur5_manipulator_kinematics/IKFastKinematicsPlugin" type="ikfast_kinematics_plugin::IKFastKinematicsPlugin" base_class_type="kinematics::KinematicsBase">
+  <class name="ur_ik_plugin/UR5KinematicsPlugin" type="ikfast_kinematics_plugin::IKFastKinematicsPlugin" base_class_type="kinematics::KinematicsBase">
     <description>IKFast61 plugin for closed-form kinematics</description>
   </class>
 </library>
 <library path="lib/libur10_ik_moveit_plugin">
-  <class name="ur10_manipulator_kinematics/IKFastKinematicsPlugin" type="ikfast_kinematics_plugin::IKFastKinematicsPlugin" base_class_type="kinematics::KinematicsBase">
+  <class name="ur_ik_plugin/UR10KinematicsPlugin" type="ikfast_kinematics_plugin::IKFastKinematicsPlugin" base_class_type="kinematics::KinematicsBase">
     <description>IKFast61 plugin for closed-form kinematics</description>
   </class>
 </library>
