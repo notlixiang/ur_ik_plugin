@@ -1,6 +1,6 @@
 /*
  * @Date: 2020-02-19 20:18:00
- * @LastEditTime: 2020-02-22 11:01:18
+ * @LastEditTime: 2020-02-22 11:59:57
  * @LastEditors: Li Xiang
  * @Description: Modified ikfast plugin, core code from the official UR package, faster than ikfast and support multiple solutions in MoveIt.
  * @FilePath: /ur_ik_plugin/src/ur_ik_plugin/src/ur_ik_solver.cpp
@@ -677,8 +677,8 @@ IKFAST_API bool ComputeIk(const IkReal *eetrans, const IkReal *eerot, const IkRe
 
 IKFAST_API bool ComputeIk2(const IkReal *eetrans, const IkReal *eerot, const IkReal *pfree, IkSolutionListBase<IkReal> &solutions)
 {
-    if (!pfree)
-        return false;
+    // if (!pfree)
+    //     return false;
 
     int n = GetNumJoints();
     double q_sols[8 * 6];
@@ -686,7 +686,8 @@ IKFAST_API bool ComputeIk2(const IkReal *eetrans, const IkReal *eerot, const IkR
 
     to_mat44(T, eetrans, eerot);
 
-    int num_sols = ur_kinematics::inverse(T, q_sols, pfree[0]);
+    // int num_sols = ur_kinematics::inverse(T, q_sols, pfree[0]);
+    int num_sols = ur_kinematics::inverse(T, q_sols, 0.001);
 
     std::vector<int> vfree(0);
 
