@@ -14,7 +14,7 @@ This plugin combines the above two solutions. We replaced the ik solver code of 
 
 1. Clone this repo to the `src` folder of your ROS workspace. Usually you should also have the `universal_robot` package in the same worksapce.
 
-2. Run   `catkin_make` to build the project.
+2. Run   `catkin_make` to build the project, Then 'source devel/setup.bash' to source the project.
    
 3. Set the kinematics_solver option in `config/kinematics.yaml` of your `ur*_moveit_config` package to the following lines to enable the plugin.
 
@@ -35,4 +35,4 @@ manipulator:
   kinematics_solver_search_resolution: 0.005
   kinematics_solver_timeout: 0.005
 ```
-4. Enjoy! You can run `roslaunch ur3_moveit_config demo.launch`,  drag the end effector and try motion planning to test if it runs correctly. 
+4. Enjoy! You can run `roslaunch ur3_moveit_config demo.launch`,  drag the end effector and try motion planning to test if it works correctly. 
